@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85fb26c4-6d0c-435d-bf9b-2bb209b01b3a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/image/index.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/show.html.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/boostrap.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/simple-sidebar.css" afterPath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/css/simple-sidebar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/img/caro.png" afterPath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/image/caro.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/img/caro2.png" afterPath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/image/caro2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/navbar/navbar.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/navbar/navbar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlatsBundle/Entity/Plats.php" afterPath="$PROJECT_DIR$/src/PlatsBundle/Entity/Plats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/PlatsBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig" />
-    </list>
+    <list default="true" id="85fb26c4-6d0c-435d-bf9b-2bb209b01b3a" name="Default" comment="" />
     <ignored path="WCS_diner.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -570,12 +553,12 @@
       <option name="presentableId" value="Default" />
       <updated>1463473645033</updated>
       <workItem from="1463473646519" duration="10289000" />
-      <workItem from="1463492321495" duration="5823000" />
+      <workItem from="1463492321495" duration="6421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16112000" />
+    <option name="totallyTimeSpent" value="16710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
