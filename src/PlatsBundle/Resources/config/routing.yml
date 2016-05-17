@@ -1,0 +1,7 @@
+plats_plats:
+    resource: "@PlatsBundle/Resources/config/routing/plats.yml"
+    prefix:   /plats
+
+plats_homepage:
+    path:     /
+    defaults: { _controller: PlatsBundle:Default:index }

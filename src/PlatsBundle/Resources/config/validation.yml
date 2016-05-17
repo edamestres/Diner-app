@@ -1,0 +1,6 @@
+# src/PlatsBundle/Resources/config/validation.yml
+PlatsBundle\Entity\Job:
+    properties:
+        # ...
+        file:
+            - Image: ~

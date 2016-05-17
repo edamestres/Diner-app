@@ -1,0 +1,24 @@
+plats_index:
+    path:     /
+    defaults: { _controller: "PlatsBundle:Plats:index" }
+    methods:  GET
+
+plats_show:
+    path:     /{id}/show
+    defaults: { _controller: "PlatsBundle:Plats:show" }
+    methods:  GET
+
+plats_new:
+    path:     /new
+    defaults: { _controller: "PlatsBundle:Plats:new" }
+    methods:  [GET, POST]
+
+plats_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PlatsBundle:Plats:edit" }
+    methods:  [GET, POST]
+
+plats_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PlatsBundle:Plats:delete" }
+    methods:  DELETE

@@ -1,0 +1,33 @@
+# src/UserBundle/Resources/config/doctrine/User.orm.yml
+
+UserBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        telephone:
+            type: string
+            length: '15'
+            unique: true
+        regimeAlimentaire:
+            type: string
+            length: 255
+            column: regime_alimentaire
+        allergie:
+            type: string
+            length: 255
+        photo:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks: {  }

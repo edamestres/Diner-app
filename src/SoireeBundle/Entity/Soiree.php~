@@ -1,0 +1,139 @@
+<?php
+
+namespace SoireeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Soiree
+ */
+class Soiree
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @var string
+     */
+    private $theme;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     * @return Soiree
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime 
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set theme
+     *
+     * @param string $theme
+     * @return Soiree
+     */
+    public function setTheme($theme)
+    {
+        $this->theme = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Get theme
+     *
+     * @return string 
+     */
+    public function getTheme()
+    {
+        return $this->theme;
+    }
+    /**
+     * @var \PlatsBundle\Entity\Plats
+     */
+    private $adress;
+
+
+    /**
+     * Set adress
+     *
+     * @param \PlatsBundle\Entity\Plats $adress
+     * @return Soiree
+     */
+    public function setAdress(\PlatsBundle\Entity\Plats $adress = null)
+    {
+        $this->adress = $adress;
+
+        return $this;
+    }
+
+    /**
+     * Get adress
+     *
+     * @return \PlatsBundle\Entity\Plats 
+     */
+    public function getAdress()
+    {
+        return $this->adress;
+    }
+    /**
+     * @var \PlatsBundle\Entity\Plats
+     */
+    private $plats;
+
+
+    /**
+     * Set plats
+     *
+     * @param \PlatsBundle\Entity\Plats $plats
+     * @return Soiree
+     */
+    public function setPlats(\PlatsBundle\Entity\Plats $plats = null)
+    {
+        $this->plats = $plats;
+
+        return $this;
+    }
+
+    /**
+     * Get plats
+     *
+     * @return \PlatsBundle\Entity\Plats 
+     */
+    public function getPlats()
+    {
+        return $this->plats;
+    }
+}

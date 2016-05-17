@@ -1,0 +1,41 @@
+SoireeBundle\Entity\Soiree:
+    type: entity
+    table: null
+    repositoryClass: SoireeBundle\Repository\SoireeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: date
+            unique: true
+        theme:
+            type: string
+            length: 255
+
+# many to one de plats vers soiree
+    manyToOne:
+        plats:
+            targetEntity: PlatsBundle\Entity\Plats
+            joinColumn:
+                name: plats_id
+                referencedColumnName: id
+    manyToMany:
+        users:
+            targetEntity: UserBundle\Entity\User
+            inversedBy: soirees
+            joinTable:
+                name: soirees_users
+                joinColumns:
+                    soiree_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    user_id:
+                        referencedColumnName: id
+        soirees:
+            targetEntity: SoireeBundle\Entity\Soiree
+            mappedBy: users
+    lifecycleCallbacks: {  }

@@ -1,0 +1,137 @@
+<?php
+
+namespace PlatsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Plats
+ */
+class Plats
+{
+    // main
+    public $file;
+    protected function getUploadDir()
+    {
+        return 'uploads/img';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->imgplats ? null : $this->getUploadDir().'/'.$this->imgplats;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->imgplats ? null : $this->getUploadRootDir().'/'.$this->imgplats;
+    }
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+    // generate code
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $nom;
+
+    /**
+     * @var string
+     */
+    private $recette;
+
+    /**
+     * @var string
+     */
+    private $photo;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Plats
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set recette
+     *
+     * @param string $recette
+     * @return Plats
+     */
+    public function setRecette($recette)
+    {
+        $this->recette = $recette;
+
+        return $this;
+    }
+
+    /**
+     * Get recette
+     *
+     * @return string 
+     */
+    public function getRecette()
+    {
+        return $this->recette;
+    }
+
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     * @return Plats
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string 
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+}

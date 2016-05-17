@@ -1,0 +1,29 @@
+PlatsBundle\Entity\Plats:
+    type: entity
+    table: null
+    repositoryClass: PlatsBundle\Repository\PlatsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            unique: true
+        recette:
+            type: string
+            length: 255
+            unique: true
+        photo:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks:
+        prePersist: [ preUpload, setCreatedAtValue, setExpiresAtValue ]
+        preUpdate: [ preUpload, setUpdatedAtValue ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]
