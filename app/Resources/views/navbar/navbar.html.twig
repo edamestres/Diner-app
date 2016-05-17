@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style type="text/css">
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map { height: 100%; }
+    </style>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="{{ path("homepage") }}">
+                        <img width="32px" style="float:left" src="{{ asset('img/hiking-person-silhouette-with-a-stick.png') }}"/>
+                        Trek-It
+                    </a>
+                </li>
+                <li>
+                    <img width="32px" style="float:left" src="{{ asset('img/hiking-person-silhouette-with-a-stick.png') }}"/>
+                    <a href="{{ path("plats_index") }}">Dashboard</a>
+                </li>
+                <li>
+                    <img width="32px" style="float:left" src="{{ asset('img/forecast.png') }}"/>
+                    <a href="#">Météo {{ weather.temperature }}</a>
+                </li>
+                <li>
+                    <img width="32px" style="float:left" src="{{ asset('img/seo-performance-graphic-in-a-circle.png') }}"/>
+                    <a href="{{ path("soiree_index") }}">Performances</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <!-- ========================================== -->
+
+
+    <script type="text/javascript" src="bundles/parcours/js/main.js'"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg1xFdFYyk1E5Sa5Oxayr9pPCCfDTM5h8&callback=initMap">
+    </script>
+{% endblock %}
