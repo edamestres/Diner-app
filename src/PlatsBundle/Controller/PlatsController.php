@@ -24,7 +24,7 @@ class PlatsController extends Controller
 
         $plats = $em->getRepository('PlatsBundle:Plats')->findAll();
 
-        return $this->render('plats/index.html.twig', array(
+        return $this->render('PlatsBundle:plats:index.html.twig', array(
             'plats' => $plats,
         ));
     }
@@ -47,7 +47,7 @@ class PlatsController extends Controller
             return $this->redirectToRoute('plats_show', array('id' => $plat->getId()));
         }
 
-        return $this->render('plats/new.html.twig', array(
+        return $this->render('PlatsBundle:plats:new.html.twig', array(
             'plat' => $plat,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class PlatsController extends Controller
     {
         $deleteForm = $this->createDeleteForm($plat);
 
-        return $this->render('plats/show.html.twig', array(
+        return $this->render('PlatsBundle:Plats:show.html.twig', array(
             'plat' => $plat,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class PlatsController extends Controller
             return $this->redirectToRoute('plats_edit', array('id' => $plat->getId()));
         }
 
-        return $this->render('plats/edit.html.twig', array(
+        return $this->render('PlatsBundle:Plats:edit.html.twig', array(
             'plat' => $plat,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
