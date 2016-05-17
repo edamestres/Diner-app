@@ -17,6 +17,7 @@ class SoireeType extends AbstractType
         $builder
             ->add('date', 'date')
             ->add('theme')
+            ->add('plats')
         ;
     }
     

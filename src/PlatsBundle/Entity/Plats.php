@@ -13,7 +13,7 @@ class Plats
     public $file;
     protected function getUploadDir()
     {
-        return 'uploads/img';
+        return 'uploads/img/';
     }
 
     protected function getUploadRootDir()
@@ -23,12 +23,12 @@ class Plats
 
     public function getWebPath()
     {
-        return null === $this->imgplats ? null : $this->getUploadDir().'/'.$this->imgplats;
+        return null === $this->photo ? null : $this->getUploadDir().'/'.$this->photo;
     }
 
     public function getAbsolutePath()
     {
-        return null === $this->imgplats ? null : $this->getUploadRootDir().'/'.$this->imgplats;
+        return null === $this->photo ? null : $this->getUploadRootDir().'/'.$this->photo;
     }
     /**
      * @ORM\PrePersist
@@ -37,7 +37,7 @@ class Plats
     {
         if (null !== $this->file) {
             // do whatever you want to generate a unique name
-            $this->logo = uniqid().'.'.$this->file->guessExtension();
+            $this->photo = uniqid().'.'.$this->file->guessExtension();
         }
     }
 
@@ -77,7 +77,7 @@ class Plats
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file->move($this->getUploadRootDir(), $this->logo);
+        $this->file->move($this->getUploadRootDir(), $this->photo);
 
         unset($this->file);
     }

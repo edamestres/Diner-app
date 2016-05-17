@@ -17,7 +17,7 @@ class PlatsType extends AbstractType
         $builder
             ->add('nom')
             ->add('recette')
-            ->add('file', 'file', array('label' => 'Ajouter une image', 'required' => false));
+            ->add('file', 'file', array('label' => 'Ajouter une image', 'required' => true));
         ;
     }
     
