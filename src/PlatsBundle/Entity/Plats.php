@@ -13,7 +13,7 @@ class Plats
     public $file;
     protected function getUploadDir()
     {
-        return 'uploads/img/';
+        return 'uploads/image/';
     }
 
     protected function getUploadRootDir()
