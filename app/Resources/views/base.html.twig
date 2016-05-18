@@ -17,6 +17,12 @@
         <link href="{{ asset('css/simple-sidebar.css') }}" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+        <link rel='stylesheet' id='responsiveslides-css'  href='http://le-mugs.com/wp-content/themes/mugs/js/responsiveslides/responsiveslides.css?ver=4.4.3' type='text/css' media='all' />
+        <link rel="canonical" href="http://le-mugs.com/" />
+        <link rel="stylesheet" href="http://le-mugs.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.3.5" type="text/css" media="all" />
+        <link rel="stylesheet" href="http://le-mugs.com/wp-content/themes/mugs/style.css" type="text/css" />
+        <link rel="shortcut icon" href="http://le-mugs.com/wp-content/themes/mugs/images/icon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="http://le-mugs.com/wp-content/themes/mugs/images/icon_180x180.png">
     </head>
     <div id="wrapper">
 
@@ -27,15 +33,16 @@
                     <a href={{path('user_homepage') }}>
                         <img width="52px" style="float:left" src="{{ asset('bundles/plats/image/caro2.png') }}"/>
                         Un diner parfait
-                    </a>e
+                    </a>
                 </li>
                 <li>
                     <img width="32px" style="float:left" src="{{ asset('bundles/plats/image/index.png') }}"/>
-                    <a href={{path('plats_index') }}>Menu</a>
+                    <a href={{path('plats_index') }}>A table</a>
 
                 </li>
                 <li>
-                    <a href={{path('soiree_index') }}><i class="fa fa-star-half-o" aria-hidden="true"></i>Vos soirées
+                    <img width="32px" style="float:left" src="{{ asset('bundles/plats/image/cocktail.png') }}"/>
+                    <a href={{path('soiree_index') }}>Vos soirées
                         </a>
                 </li>
 
@@ -56,5 +63,34 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('bundles/plats/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset ('bundles/plats/js/main.js') }}"></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/prefixfree.min.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/modernizr.custom.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/responsiveslides/responsiveslides.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/parallax/jquery.parallax.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/scrollmagic/ScrollMagic.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/scrollmagic/plugins/debug.addIndicators.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/ScrollToPlugin.min.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/scrollmagic/plugins/animation.gsap.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/jquery.mousewheel.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/lethargy.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/pace.min.js?ver=4.4.3'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/themes/mugs/js/main.min.js?ver=1.0'></script>
+    <script type='text/javascript' src='http://le-mugs.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=239997546093598";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+        var pageId = 11;
+        var url = "http://le-mugs.com/wp-content/themes/mugs/ajax-menu.php?id="+pageId;
+    </script>
     </body>
 </html>

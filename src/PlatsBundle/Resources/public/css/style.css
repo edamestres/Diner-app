@@ -127,3 +127,48 @@
 .fa {
     font-size: 35px !important;
 }
+
+svg#tracesvg {
+    position: absolute;
+    top: 530px;
+    left: calc(50% - 623px);
+    z-index: 610;
+}
+
+#linea{
+    stroke-dasharray: 20;
+    animation: dash 20s infinite linear;
+}
+
+svg#tracesvg {
+    position: absolute;
+    top: 530px;
+    left: calc(50% - 623px);
+    z-index: 610;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.section5 .calme {
+    background-color: #6d969c;
+    height: 25%;
+}
+
+.section5 .section5para {
+    height: 75%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #6d969c 0%, #194853 100% );
+}
+
+.section6 {
+    height: 4000px;
+    width: 100%;
+    background-color: #194853;
+    background-image: url("http://le-mugs.com/wp-content/themes/mugs/./images/pattern-section6.jpg");
+    background-repeat: repeat;
+    background-position: top;
+    position: relative;
+    z-index: 600;
+    overflow: hidden;
+}
