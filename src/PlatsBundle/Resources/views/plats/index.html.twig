@@ -1,43 +1,49 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Plats list</h1>
+    <div class="container-fluid">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Recette</th>
-                <th>Photo</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for plat in plats %}
-            <tr>
-                <td><a href="{{ path('plats_show', { 'id': plat.id }) }}">{{ plat.id }}</a></td>
-                <td>{{ plat.nom }}</td>
-                <td>{{ plat.recette }}</td>
-                <td>{{ plat.photo }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('plats_show', { 'id': plat.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('plats_edit', { 'id': plat.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-8 color_back">
+                    <h1 class="titre_index">Liste des plats</h1>
+                    <div class="space"></div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h2 class="text-center">Nom</h2>
+                            {% for plat in plats %}
+                                <div class="row liste_index text-center">
+                                    <td>{{ plat.nom }}<br /></td>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-3">
+                            <h2 class="text-center">Recette</h2>
+                            {% for plat in plats %}
+                                <div class="row liste_index text-center">
+                                    <td>{{ plat.recette }}<br /></td>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="text-center">Photo</h2>
+                                {% for plat in plats %}
+                                    <div class="row">
+                                        <td><img class="img_plat img-responsive img-center" src="{{ asset('uploads/img/') }}{{ plat.photo }}" alt="image_du_plat"><br /></td>
+                                    </div>
+                                {% endfor %}
+                        </div>
+                        <div class="col-md-2">
+                            <h2 class="text-center">Edit</h2>
+                                {% for plat in plats %}
+                                    <div class="row liste_index text-center">
+                                        <a href="{{ path('plats_show', { 'id': plat.id }) }}">Voir</a>
+                                    </div>
+                                {% endfor %}
+                        </div>
+                    </div>
+                    <div class="text-center"><a href="{{'new'}}">Créer un nouveau plat</a></div>
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('plats_new') }}">Create a new entry</a>
-        </li>
-    </ul>
+    </div>
 {% endblock %}

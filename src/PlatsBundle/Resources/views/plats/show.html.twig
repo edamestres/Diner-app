@@ -1,40 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Plats</h1>
+    <div class="container-fluid">
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ plat.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ plat.nom }}</td>
-            </tr>
-            <tr>
-                <th>Recette</th>
-                <td>{{ plat.recette }}</td>
-            </tr>
-            <tr>
-                <th>Photo</th>
-                <td>{{ plat.photo }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10 color_back">
+                <h1 class="titre_index">Plats</h1>
+                <div class="space"></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 class="text-center">Id</h2>
+                        <div class="row liste_index text-center">
+                            <td>{{ plat.id }} <br /></td>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="text-center">Nom</h2>
+                        <div class="row liste_index text-center">
+                            <td>{{ plat.nom }}<br /></td>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="text-center">Recette</h2>
+                            <div class="row liste_index text-center">
+                                <td>{{ plat.recette }}<br /></td>
+                            </div>
+                    </div>
+                    <div class="col-md-2">
+                        <h2 class="text-center">Edit</h2>
+                            <div class="row liste_index text-center">
+                                <a href="{{ path('plats_show', { 'id': plat.id }) }}">Voir</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <ul>
+                        <li>
+                            <a href="{{ path('plats_index') }}">Back to the list</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('plats_edit', { 'id': plat.id }) }}">Edit</a>
+                        </li>
+                        <li>
+                            {{ form_start(delete_form) }}
+                            <input type="submit" value="Delete">
+                            {{ form_end(delete_form) }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('plats_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('plats_edit', { 'id': plat.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    </div>
 {% endblock %}

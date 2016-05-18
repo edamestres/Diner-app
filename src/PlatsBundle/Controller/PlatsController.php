@@ -44,7 +44,7 @@ class PlatsController extends Controller
             $em->persist($plat);
             $em->flush();
 
-            return $this->redirectToRoute('plats_show', array('id' => $plat->getId()));
+            return $this->redirectToRoute('plats_index', array('id' => $plat->getId()));
         }
 
         return $this->render('PlatsBundle:plats:new.html.twig', array(
