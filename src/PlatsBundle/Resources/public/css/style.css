@@ -144,3 +144,7 @@ svg#tracesvg {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+.formulaire {
+    background-image: url('../image/caro.jpg');
+}
