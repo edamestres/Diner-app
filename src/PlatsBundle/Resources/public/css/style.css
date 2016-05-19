@@ -144,3 +144,21 @@ svg#tracesvg {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+.formulaire {
+    background-image: url('../image/caro.jpg');
+    height: 850px;
+    background-size: cover;
+    padding-top: 150px;
+    text-align: center;
+    color: white;
+}
+
+.log {
+    background-image: url('../image/caro.jpg');
+    height: 850px;
+    background-size: cover;
+    padding-top: 150px;
+    text-align: center;
+    color: white;
+}
