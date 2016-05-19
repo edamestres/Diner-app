@@ -1,0 +1,11 @@
+SoireeBundle\Entity\Participation:
+    type: entity
+    table: soirees_users
+    repositoryClass: SoireeBundle\Repository\ParticipationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
