@@ -147,4 +147,11 @@ svg#tracesvg {
 
 .formulaire {
     background-image: url('../image/caro.jpg');
+    height: 650px;
+    background-size: cover;
+    padding-top: 150px;
+    text-align: center;
+    color: white;
+
+
 }
