@@ -1,4 +1,5 @@
 <?php
+// src/Acme/UserBundle/AcmeUserBundle.php
 
 namespace UserBundle;
 
