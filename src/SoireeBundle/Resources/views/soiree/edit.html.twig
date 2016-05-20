@@ -4,8 +4,8 @@
     <h1>Soiree edit</h1>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+    {{ form_widget(edit_form) }}
+    <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
 
     <ul>
@@ -14,8 +14,30 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-4 color_back">
+                <h1 class="titre_index">Soirée edit</h1>
+                <div class="space"></div>
+                {{ form_start(edit_form) }}
+                {{ form_widget(edit_form) }}
+                <input type="submit" value="Edit" />
+                {{ form_end(edit_form) }}
+                <ul>
+                    <li>
+                        <a href="{{ path('soiree_index') }}">Back to the list</a>
+                    </li>
+                    <li>
+                        {{ form_start(delete_form) }}
+                        <input type="submit" value="Delete">
+                        {{ form_end(delete_form) }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock %}
