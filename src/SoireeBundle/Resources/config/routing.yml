@@ -1,7 +1,3 @@
 soiree_soiree:
     resource: "@SoireeBundle/Resources/config/routing/soiree.yml"
     prefix:   /soiree
-
-soiree_homepage:
-    path:     /
-    defaults: { _controller: SoireeBundle:Default:index }

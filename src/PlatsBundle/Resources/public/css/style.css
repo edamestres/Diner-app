@@ -151,12 +151,24 @@ svg#tracesvg {
 
 .formulaire {
     background-image: url('../image/caro.jpg');
-    height: 650px;
+    height: 850px;
     background-size: cover;
     padding-top: 150px;
     text-align: center;
     color: white;
 
+<<<<<<< HEAD
 
 >>>>>>> f0971764dcf7ded7b53f4785583a543aa2a653ee
+=======
+>>>>>>> 45ef969e5e0920fa3acb43201eae8944ba6174e9
+}
+
+.log {
+    background-image: url('../image/caro.jpg');
+    height: 850px;
+    background-size: cover;
+    padding-top: 150px;
+    text-align: center;
+    color: white;
 }

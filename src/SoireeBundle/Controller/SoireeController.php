@@ -24,7 +24,7 @@ class SoireeController extends Controller
 
         $soirees = $em->getRepository('SoireeBundle:Soiree')->findAll();
 
-        return $this->render('soiree/index.html.twig', array(
+        return $this->render('SoireeBundle:soiree:index.html.twig', array(
             'soirees' => $soirees,
         ));
     }
@@ -47,7 +47,7 @@ class SoireeController extends Controller
             return $this->redirectToRoute('soiree_show', array('id' => $soiree->getId()));
         }
 
-        return $this->render('soiree/new.html.twig', array(
+        return $this->render('SoireeBundle:soiree:new.html.twig', array(
             'soiree' => $soiree,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class SoireeController extends Controller
     {
         $deleteForm = $this->createDeleteForm($soiree);
 
-        return $this->render('soiree/show.html.twig', array(
+        return $this->render('SoireeBundle:soiree:show.html.twig', array(
             'soiree' => $soiree,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class SoireeController extends Controller
             return $this->redirectToRoute('soiree_edit', array('id' => $soiree->getId()));
         }
 
-        return $this->render('soiree/edit.html.twig', array(
+        return $this->render('SoireeBundle:soiree:edit.html.twig', array(
             'soiree' => $soiree,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
